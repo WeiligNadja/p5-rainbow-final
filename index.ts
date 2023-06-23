@@ -13,20 +13,12 @@ import { drawCircle } from './circle';
 export let p: p5;
 new p5((p5: p5) => {
   p = p5;
-  p.preload = preload;
+
   p.setup = setup;
 
   p.draw = draw;
-  p.keyPressed = keyPressed;
-  p.mousePressed = mousePressed;
-  p.doubleClicked = mouseDoubleClicked;
-});
 
-function preload() {
-  // Diese Funktion wird vor `setup` aufgerufen. Wir verwenden sie,
-  // um z.B. Bilder zu laden.
-  // https://p5js.org/reference/#/p5/preload
-}
+});
 
 function setup() {
   // Diese Funktion wird einmal beim Programmstart aufgerufen.
@@ -36,23 +28,6 @@ function setup() {
 
 }
 
-function keyPressed() {
-  // Diese Funktion wird aufgerufen, wenn eine Taste gedrückt wird.
-  // https://p5js.org/reference/#/p5/keyPressed
-  console.log(`Key ${p.keyCode} has been pressed`);
-}
-
-function mouseDoubleClicked() {
-  // Diese Funktion wird aufgerufen, wenn die Mause geklickt wird.
-  // https://p5js.org/reference/#/p5/mousePressed
-  console.log(`Mouse was double clicked at ${p.mouseX}/${p.mouseY}`);
-}
-
-function mousePressed() {
-  // Diese Funktion wird aufgerufen, wenn die Mause geklickt wird.
-  // https://p5js.org/reference/#/p5/mousePressed
-  console.log(`Mouse was pressed at ${p.mouseX}/${p.mouseY}`);
-}
 
 function draw() {
   // Himmel
